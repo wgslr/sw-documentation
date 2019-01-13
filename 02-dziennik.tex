@@ -15,6 +15,9 @@ sys_arch_mbox_fetch(&conn->acceptmbox, &accept\_ptr, 0);
 \end{verbatim}
 w api\_lib.c:netconn\_accept
  
+ \subsection{2018-12-18}
+Problematyczna okazał się projekt wygenerowany przez program od producenta płtyki. Okazało się że
+aby mbedtls działał poprawnie należey włączyć sprzętowy random number generator.
 
 \subsection{2019-01-03}
 Tym razem zwiększenie stosu ze 128 na 1024 przydaje się do rozwiązania problemów z ładowaniem 
@@ -81,7 +84,7 @@ mbedtls_ssl_handshake line 6576
 
 … ale nie udało się tego powtórzyć z identycznymi ustawieniami.
 
-\subsection{2018-12-11}
+\subsection{2019-01-08}
 Zarówno wypisywanie komunikatów z kodu mbdetls, jak verbose mode curla wskazują, że ostatnim wykonywanym etapem jest Server Hello:
 
 \includegraphics[width=\linewidth]{./images/2.png}
